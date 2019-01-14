@@ -7,4 +7,4 @@ test:
 
 .PHONY: benchmark
 benchmark:
-	@go test -v ./... -bench=.
+	@go test -v ./... -benchmem -bench=.
