@@ -1,6 +1,7 @@
 package iban
 
 import (
+	"fmt"
 	"strconv"
 	"strings"
 )
@@ -21,7 +22,7 @@ func CalculateCzech(number, bankCode string) (result string, err error) {
 	defer func() {
 		if r := recover(); r != nil {
 			result = ""
-			err = ftm.Errorf("%+v", r)
+			err = fmt.Errorf("%+v", r)
 		}
 	}()
 
