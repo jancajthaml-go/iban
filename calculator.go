@@ -20,7 +20,7 @@ func Calculate(number, identityCode string) (string, error) {
 		"0710", // Česká národní banka
 		"0730": // Česká národní banka - Clearing centre
 		{
-			return CalculateCzech(number, identityCode)
+			return calculateCzech(number, identityCode)
 		}
 
 	default:

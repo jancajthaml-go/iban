@@ -18,7 +18,7 @@ func init() {
 	}
 }
 
-func CalculateCzech(number, bankCode string) (result string, err error) {
+func calculateCzech(number, bankCode string) (result string, err error) {
 	defer func() {
 		if r := recover(); r != nil {
 			result = ""
