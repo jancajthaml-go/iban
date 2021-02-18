@@ -1,5 +1,7 @@
 package iban
 
+var zero = uint('0')
+
 func mod97(number string) int {
 	var (
 		d uint
@@ -7,9 +9,8 @@ func mod97(number string) int {
 		x uint
 		l int = len(number)
 	)
-
 scan:
-	d = uint(number[i]) - 48
+	d = uint(number[i]) - zero
 	if d > 9 {
 		return -1
 	}
